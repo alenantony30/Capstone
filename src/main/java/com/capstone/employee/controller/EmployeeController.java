@@ -16,7 +16,7 @@ public class EmployeeController {
 	
 	@Autowired
 	IEmployeeService employeeService;
-	
+
 	@GetMapping("/get/by/{ID}")
 	public Employee getEmployeeByID(@PathVariable int ID) throws InvalidEmployeeException {
 		return employeeService.getEmployeeById(ID);

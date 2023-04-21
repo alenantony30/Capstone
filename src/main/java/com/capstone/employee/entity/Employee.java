@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class Employee {
-	
+
 	@Id
 	private int EmployeeID;
 	private String EmployeeName;
