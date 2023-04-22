@@ -1,10 +1,9 @@
 package com.capstone.employee.service;
 
-import com.capstone.employee.entity.Employee;
-import com.capstone.employee.exception.InvalidEmployeeException;
+import com.capstone.employee.vo.EmployeeVO;
 
 public interface IEmployeeService {
 	
-	public Employee getEmployeeById(int ID) throws InvalidEmployeeException;
+	public EmployeeVO getEmployeeById(int ID) throws Exception;
 
 }

@@ -11,8 +11,14 @@ import com.capstone.employee.exception.InvalidEmployeeException;
 public class EmployeeExceptionController {
 	
 	@ExceptionHandler(InvalidEmployeeException.class)
-	public ResponseEntity<String> exceptionHandler(InvalidEmployeeException exp){
+	public ResponseEntity<String> invalidExceptionHandler(InvalidEmployeeException exp){
 		return new ResponseEntity<String>(exp.getMessage().toString(),HttpStatus.EXPECTATION_FAILED);
 	}
+	
+	@ExceptionHandler(Exception.class)
+	public ResponseEntity<String> exceptionHandler(Exception exp){
+		return new ResponseEntity<String>(exp.getMessage().toString(),HttpStatus.EXPECTATION_FAILED);
+	}
+	
 
 }

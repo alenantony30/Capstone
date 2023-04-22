@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.capstone.employee.entity.Employee;
 import com.capstone.employee.exception.InvalidEmployeeException;
+import com.capstone.employee.vo.EmployeeVO;
 
 @SpringBootTest
 class EmployeeServiceTest {
@@ -17,9 +17,9 @@ class EmployeeServiceTest {
 	EmployeeService service;
 
 	@Test
-	void testGetEmployeeById() throws InvalidEmployeeException {
+	void testGetEmployeeById() throws Exception {
 
-		Employee employee = service.getEmployeeById(101);
+		EmployeeVO employee = service.getEmployeeById(101);
 		assertEquals("John Smith", employee.getEmployeeName());
 	}
 
