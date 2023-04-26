@@ -41,3 +41,17 @@ VALUES
   (108,'Sara Lee', '1994-08-31'),
   (109,'Tom Chen', '1989-12-25'),
   (110,'Alice Yang', '1991-04-08');
+
+
+
+
+docker network create my-network
+
+
+docker run --name my-postgres-db --network my-network -e POSTGRES_PASSWORD=admin -d postgres
+
+
+docker exec -it my-postgres-db  psql -U postgres
+ 
+
+docker run --name my-spring-boot-app --network my-network -e SPRING_DATASOURCE_URL=jdbc:postgresql://my-postgres-db:5432/EmployeeDB -e SPRING_DATASOURCE_USERNAME=postgres -e SPRING_DATASOURCE_PASSWORD=admin -p 8445:8445 my-app
