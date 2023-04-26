@@ -6,7 +6,7 @@ CREATE TABLE Employee (
   DateOfBirth DATE NOT NULL
 );
 
-INSERT INTO Employee (EmployeeID, EmployeeName, DateOfBirth)
+INSERT INTO Employee (EmployeeID, employee_name, date_of_birth)
 VALUES
   (101,'John Smith', '1990-05-12'),
   (102,'Mary Johnson', '1995-07-24'),
@@ -18,6 +18,19 @@ VALUES
   (108,'Sara Lee', '1994-08-31'),
   (109,'Tom Chen', '1989-12-25'),
   (110,'Alice Yang', '1991-04-08');
+
+INSERT INTO Employee (EmployeeID, employee_name, date_of_birth)
+VALUES
+  (111,'ALEN ANTONY', '1998-11-11'),
+  (112,'Ajay S', '1998-07-24'),
+  (113,'Arun P', '1998-11-02'),
+  (114,'Sam George', '1997-03-18'),
+  (115,'Albin', '1998-09-06'),
+  (116,'Emily Wang', '1993-02-22'),
+  (117,'Jason Kim', '1987-06-15'),
+  (118,'Sara Lee', '1994-08-31'),
+  (119,'Tom Chen', '1989-12-25'),
+  (120,'Alice Yang', '1991-04-08');
 
 
 select * from Employee;
