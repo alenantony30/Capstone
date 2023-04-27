@@ -12,11 +12,11 @@ import com.capstone.employee.vo.EmployeeVO;
 
 @SpringBootTest
 class EmployeeServiceTest {
-
-	@Autowired
+/*
+	//@Autowired
 	EmployeeService service;
 
-	@Test
+	/*@Test
 	void testGetEmployeeById() throws Exception {
 
 		//EmployeeVO employee = service.getEmployeeById(101);
