@@ -13,7 +13,7 @@ spec:
         app: employee-server
     spec:
       containers:
-       - image: alenantony30/my-app
+       - image: alenantony30/my-app:latest
          name: employee-server
          ports:
            - containerPort: 8445
