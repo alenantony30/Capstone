@@ -14,6 +14,6 @@ employeedb
 employeedb
 
 
-kubectl exec -it mysql-5d5454767-n7tdm /bin/bash
+kubectl exec -it mysql-5d5454767-jgbd5 /bin/bash
 
 mysql -h mysql -u root -p

@@ -6,7 +6,7 @@ CREATE TABLE Employee (
   DateOfBirth DATE NOT NULL
 );
 
-INSERT INTO Employee (EmployeeID, employee_name, date_of_birth)
+INSERT INTO employee (employeeid, employee_name, date_of_birth)
 VALUES
   (101,'John Smith', '1990-05-12'),
   (102,'Mary Johnson', '1995-07-24'),

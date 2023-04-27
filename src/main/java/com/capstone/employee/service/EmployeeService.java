@@ -7,6 +7,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 import java.util.Base64;
+import java.util.List;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -92,6 +93,12 @@ public class EmployeeService implements IEmployeeService {
 		cipher.init(Cipher.DECRYPT_MODE, secretKey, ivspec);
 		/* Retruns decrypted value. */
 		return new String(cipher.doFinal(Base64.getDecoder().decode(strToDecrypt)));
+	}
+
+	@Override
+	public List<Employee> getEmployees() {
+		// TODO Auto-generated method stub
+		return employeeRepository.findAll();
 	}
 
 }
