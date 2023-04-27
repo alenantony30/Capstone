@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: employee-server
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: employee-server
@@ -13,16 +13,14 @@ spec:
         app: employee-server
     spec:
       containers:
-       - image: ##############
+       - image: alenantony30/my-app
          name: employee-server
          ports:
            - containerPort: 8445
          env:
             - name: SPRING_DATASOURCE_PASSWORD
-              value: #########
+              value: admin
             - name: SPRING_DATASOURCE_URL
-              value: ############
+              value: jdbc:postgresql://postgresql:5432/employeedb
             - name: SPRING_DATASOURCE_USERNAME
-              value: ##########
-            - name: SPRING_JPA_HIBERNATE_DDL_AUTO
-              value: update
+              value: postgres

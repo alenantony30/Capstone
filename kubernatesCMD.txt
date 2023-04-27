@@ -1,0 +1,9 @@
+
+----To connect to the DB
+kubectl exec -it postgresql-5bbb86f8c-rj7xj bash
+
+----To connect to the postgres
+psql -U postgres
+
+----to display all db
+\l
