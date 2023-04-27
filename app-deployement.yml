@@ -16,7 +16,7 @@ spec:
         - name: springboot-crud-k8s
           image: alenantony30/my-app:latest
           ports:
-            - containerPort: 8445
+            - containerPort: 9000
           env:   # Setting Enviornmental Variables
             - name: DB_HOST   # Setting Database host address from configMap
               value: mysql
