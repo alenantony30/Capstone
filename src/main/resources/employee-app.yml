@@ -21,6 +21,6 @@ spec:
             - name: SPRING_DATASOURCE_PASSWORD
               value: admin
             - name: SPRING_DATASOURCE_URL
-              value: jdbc:postgresql://postgresql:5432/employeedb
+              value: jdbc:postgresql://postgresql:5432/employeedb?useSSL=false
             - name: SPRING_DATASOURCE_USERNAME
               value: postgres
