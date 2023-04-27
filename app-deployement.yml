@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: springboot-k8s-mysql
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
@@ -16,7 +16,7 @@ spec:
         - name: springboot-crud-k8s
           image: alenantony30/my-app:latest
           ports:
-            - containerPort: 9000
+            - containerPort: 8585
           env:   # Setting Enviornmental Variables
             - name: DB_HOST   # Setting Database host address from configMap
               value: mysql
@@ -38,6 +38,6 @@ spec:
     app: springboot-k8s-mysql
   ports:
     - protocol: "TCP"
-      port: 9000 # The port that the service is running on in the cluster
-      targetPort: 9000 # The port exposed by the service
+      port: 8585 # The port that the service is running on in the cluster
+      targetPort: 8585 # The port exposed by the service
   type: NodePort # type of the service.
