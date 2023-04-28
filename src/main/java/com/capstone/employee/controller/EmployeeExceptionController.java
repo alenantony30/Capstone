@@ -15,10 +15,10 @@ public class EmployeeExceptionController {
 		return new ResponseEntity<String>(exp.getMessage().toString(),HttpStatus.EXPECTATION_FAILED);
 	}
 	
-/*	@ExceptionHandler(Exception.class)
+	@ExceptionHandler(Exception.class)
 	public ResponseEntity<String> exceptionHandler(Exception exp){
 		return new ResponseEntity<String>(exp.getMessage().toString(),HttpStatus.EXPECTATION_FAILED);
-	}*/
+	}
 	
 
 }
